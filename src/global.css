@@ -1,26 +1,9 @@
-/**
- * WHAT IS THIS FILE?
- *
- * Globally applied styles. No matter which components are in the page or matching route,
- * the styles in here will be applied to the Document, without any sort of CSS scoping.
- *
- */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  @apply bg-[#fafafa] pt-5 px-5 pb-10;
-
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    sans-serif;
-}
-
-main {
-  @apply overflow-hidden max-w-3xl mx-0 my-auto bg-white rounded-md shadow-qwik-light-purple;
-
-  box-shadow: 0px 0px 130px -50px;
+  @apply bg-gray p-0 m-0;
 }
 
 h1,

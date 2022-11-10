@@ -1,5 +1,7 @@
 # Qwik App ⚡️ Template with tailwind
 
+This is my qwik template
+
 ## What's on this template
 
 - qwik
@@ -18,7 +20,7 @@ npm run dev # or `yarn dev`
 
 ## Preview
 
-The preview command will create a production build of the client modules, a production build of `src/entry.preview.tsx`, and run a local server. The preview server is only for convenience to locally preview a production build, and it should not be used as a production server.
+The preview command will create a production build of the client modules, a production build of `src/entries/preview.tsx`, and run a local server. The preview server is only for convenience to locally preview a production build, and it should not be used as a production server.
 
 ```shell
 npm run preview # or `yarn preview`
@@ -30,4 +32,10 @@ The production build will generate client and server modules by running both cli
 
 ```shell
 npm run build # or `yarn build`
+```
+
+## Static Site Generator (Node.js)
+
+```
+npm run ssg
 ```

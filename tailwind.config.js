@@ -1,15 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        "qwik-dark-blue": "#006ce9",
-        "qwik-light-blue": "#18b6f6",
-        "qwik-light-purple": "#ac7ff4",
-        "qwik-dark-purple": "#713fc2",
+        accent: "#0065a9",
+        "accent-light": "#0098ff",
+        "darken-light": "#333333",
+        "darken-black": "#1e1e1e",
+        dark: "#252525",
+        gray: "#eef3f8"
+
       }
     },
   },
