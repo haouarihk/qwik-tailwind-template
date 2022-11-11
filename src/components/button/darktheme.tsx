@@ -1,7 +1,5 @@
 import { component$, useClientEffect$ } from "@builder.io/qwik";
 
-
-
 export const defaultColor: "dark" | "light" = "dark";
 export const setDarktheme = (k: string) => {
     if (k == "dark")
@@ -9,7 +7,6 @@ export const setDarktheme = (k: string) => {
     else
         document.documentElement.classList.remove('dark');
 }
-
 
 
 export default component$(() => {
