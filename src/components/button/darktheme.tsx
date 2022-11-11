@@ -1,17 +1,35 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useClientEffect$ } from "@builder.io/qwik";
+
+
+
+export const defaultColor: "dark" | "light" = "dark";
+export const setDarktheme = (k: string) => {
+    if (k == "dark")
+        document.documentElement.classList.add('dark');
+    else
+        document.documentElement.classList.remove('dark');
+}
 
 
 
 export default component$(() => {
+    useClientEffect$(() => {
 
+        const k = localStorage.getItem("color-theme");
+
+        // if it's default color, then don't change anything
+        if (!k || k == defaultColor) {
+            return setDarktheme(defaultColor)
+        }
+
+        // if it's not, then it's probably the other possibility
+        setDarktheme(k)
+    });
 
 
     return <>
         <button
-            onClick$={() => {
-                document.documentElement.classList.add('dark');
-                localStorage.setItem('color-theme', 'dark');
-            }}
+            onClick$={() => setDarktheme("dark")}
             class="p-3 hover:bg-gray active:ring-2 dark:hidden"
         >
             <svg
@@ -29,10 +47,7 @@ export default component$(() => {
         </button>
 
         <button
-            onClick$={() => {
-                document.documentElement.classList.remove('dark');
-                localStorage.setItem('color-theme', 'light');
-            }}
+            onClick$={() => setDarktheme("light")}
             class="p-3 hover:bg-gray hover:dark:bg-darken-black active:ring-2 hidden dark:block"
         >
             <svg
